@@ -1,12 +1,53 @@
-var androids=
-    [{
-        title: "oil",
-        description: "Parachute Coconut Oil",
-        weight: "200 ml",
-        imgUrl: 'https://i.ibb.co/09hqD2K/oil.png',
-        price: 80,
-        key: "6"
-    },
+var groceries=
+    [
+        {
+            title: "Bay-leaves",
+            description: "Moushum Bay Leaves",
+            weight: "200 gm",
+            imgUrl: 'https://i.ibb.co/XDQfdjb/bay-leaves.png',
+            price: 10,
+            key: "1"
+        },
+        {
+            title: "chanachur",
+            description: "Ruchi BBQ Chanachur",
+            weight: "350 gm",
+            imgUrl: 'https://i.ibb.co/7gWDxpw/chanachur.png',
+            price: 20,
+            key: "2"
+        },
+        {
+            title: "chips",
+            description: "Bombay Sweets Mr.Twist",
+            weight: "25 gm",
+            imgUrl: 'https://i.ibb.co/YkQFxC5/chips.png',
+            price: 30,
+            key: "3"
+        },
+        {
+            title: "gas",
+            description: "Omera LPG Refill",
+            weight: "12 kg",
+            imgUrl: 'https://i.ibb.co/DrLw6bZ/gas.png',
+            price: 50,
+            key: "4"
+        },
+        {
+            title: "milk",
+            description: "Marks Full Cream Milk Powder",
+            weight: "500 gm",
+            imgUrl: 'https://i.ibb.co/vcXf722/milk.png',
+            price: 70,
+            key: "5"
+        },
+        {
+            title: "oil",
+            description: "Parachute Coconut Oil",
+            weight: "200 ml",
+            imgUrl: 'https://i.ibb.co/09hqD2K/oil.png',
+            price: 80,
+            key: "6"
+        },
         {
             title: "onion",
             description: "Onion Local",
@@ -30,9 +71,10 @@ var androids=
             imgUrl: 'https://i.ibb.co/Kz7g8vh/soap.png',
             price: 90,
             key: "9"
-        }];
+        }
+    ];
 
-export default androids;
+export default groceries;
 
 
 
