@@ -58,7 +58,7 @@ var groceries=
         },
         {
             title: "rice",
-            description: "Rashkey Minicate Rice",
+            description: "Rashid Minicate Rice",
             weight: "50 kg",
             imgUrl: 'https://i.ibb.co/4YgwWBg/rice.png',
             price: 80,
