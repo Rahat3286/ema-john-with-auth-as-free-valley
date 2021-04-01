@@ -1,13 +1,12 @@
 import React, { useEffect } from 'react';
 import fakeData from '../../fakeData';
 import { useState } from 'react';
-import './Shop.css';
 import Product from '../Product/Product';
 import Cart from '../Cart/Cart';
 import { addToDatabaseCart, getDatabaseCart } from '../../utilities/databaseManager';
 import { Link } from 'react-router-dom';
 
-const Shop = () => {
+const Home = () => {
     const first9 = fakeData.slice(0, 9);
     const [products, setProducts] = useState(first9);
     const [cart, setCart] = useState([]);
@@ -65,4 +64,4 @@ const Shop = () => {
     );
 };
 
-export default Shop;
+export default Home;

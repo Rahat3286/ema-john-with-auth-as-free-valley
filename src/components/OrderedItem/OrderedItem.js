@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ReviewItem = (props) => {
+const OrderedItem = (props) => {
     console.log(props);
     const { description, price, quantity, title, weight, imgUrl, key, name } = props.product;
 
@@ -13,9 +13,9 @@ const ReviewItem = (props) => {
     // };
     return (
         <div className="container col-md-12 d-flex justify-content-around border-bottom ">
-            <h5 className="col-md-3">{description}</h5>
-            <h5 className="col-md-3">{quantity}</h5>
-            <h5 className="col-md-3"> $ {price}</h5>
+            <h6 className="col-md-3">{description}</h6>
+            <h6 className="col-md-3">{quantity}</h6>
+            <h6 className="col-md-3"> $ {price}</h6>
             <button
                 className="btn btn-danger col-md-3"
                 onClick={() => props.removeProduct(key)}
@@ -34,4 +34,4 @@ const ReviewItem = (props) => {
     );
 };
 
-export default ReviewItem;
+export default OrderedItem;

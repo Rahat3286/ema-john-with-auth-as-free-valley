@@ -1,7 +1,6 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
-import './Product.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
 const Product = (props) => {
@@ -18,7 +17,7 @@ const Product = (props) => {
                 <div className="card-footer d-flex justify-content-around">
                     <p style={{ fontWeight: 'bold' }}>$ {price}</p>
                     {
-                        props.showAddToCart === true && <Link to="/review">
+                        props.showAddToCart === true && <Link to="/order">
                             <button
                                 className="btn btn-success"
                                 onClick={() => props.handleAddProduct(props.product)}

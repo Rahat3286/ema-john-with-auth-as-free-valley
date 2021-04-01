@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { getDatabaseCart, removeFromDatabaseCart, processOrder } from '../../utilities/databaseManager';
 import fakeData from '../../fakeData';
-import ReviewItem from '../ReviewItem/ReviewItem';
+import OrderedItem from '../OrderedItem/OrderedItem';
 import Cart from '../Cart/Cart';
 import happyImage from '../../images/giphy.gif';
 import { useHistory } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
-const Review = () => {
+const Order = () => {
     const [cart, setCart] = useState([]);
     const [orderPlaced, setOrderPlaced] = useState(false);
     const history = useHistory();
@@ -40,17 +42,18 @@ const Review = () => {
     }
     return (
         <div className="container">
+            <h1 style={{ color: 'rgb(54,57,88)' }}>Checkout</h1>
             <div className="col-md-12 d-flex justify-content-around border-bottom">
-                <div className="col-md-3">Description</div>
-                <div className="col-md-3">Quantity</div>
-                <div className="col-md-3">Price</div>
-                <div className="col-md-3"></div>
+                <div className="col-md-3"><h4>Description</h4></div>
+                <div className="col-md-3"><h4>Quantity</h4></div>
+                <div className="col-md-3"><h4>Price</h4></div>
+                <div className="col-md-3"><FontAwesomeIcon icon={faTrash} /></div>
             </div>
             {
-                cart.map(pd => <ReviewItem
+                cart.map(pd => <OrderedItem
                     key={pd.key}
                     removeProduct={removeProduct}
-                    product={pd}></ReviewItem>)
+                    product={pd}></OrderedItem>)
             }
             <div className="text-center">
                 <Cart cart={cart}>
@@ -61,4 +64,4 @@ const Review = () => {
     );
 };
 
-export default Review;
+export default Order;

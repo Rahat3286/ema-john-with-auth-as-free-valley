@@ -5,16 +5,18 @@ import {
   Switch,
   Route
 } from "react-router-dom";
-import Shop from './components/Shop/Shop';
+
+import Admin from './components/Admin/Admin';
 import Header from './components/Header/Header';
-import Review from './components/Review/Review';
-import Inventory from './components/Inventory/Inventory';
+import Home from './components/Home/Home';
 import NotFound from './components/NotFound/NotFound';
+import Order from './components/Order/Order';
 import ProductDetail from './components/ProductDetail/ProductDetail';
 import Shipment from './components/Shipment/Shipment';
 import Login from './components/Login/Login';
 import { createContext } from 'react';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+
 
 export const UserContext = createContext();
 
@@ -29,14 +31,14 @@ function App(props) {
       <Router>
         <Header></Header>
         <Switch>
-          <Route path="/shop">
-            <Shop></Shop>
+          <Route path="/home">
+            <Home/>
           </Route>
-          <Route path="/review">
-            <Review></Review>
+          <Route path="/order">
+            <Order/>
           </Route>
-          <PrivateRoute path="/inventory">
-            <Inventory></Inventory>
+          <PrivateRoute path="/admin">
+            <Admin/>
           </PrivateRoute>
           <Route path="/login">
             <Login></Login>
@@ -45,7 +47,7 @@ function App(props) {
             <Shipment></Shipment>
           </PrivateRoute>
           <Route exact path="/">
-            <Shop></Shop>
+            <Home/>
           </Route>
           <Route path="/product/:productKey">
             <ProductDetail></ProductDetail>

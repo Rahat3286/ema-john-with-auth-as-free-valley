@@ -15,9 +15,9 @@ const Header = () => {
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav ml-auto">
-                    <li className="nav-item"><Link to="/shop" className="nav-link">Shop</Link></li>
-                    <li className="nav-item"><Link to="/review" className="nav-link">Order Review</Link></li>
-                    <li className="nav-item"><Link to="/inventory" className="nav-link">Admin</Link></li>
+                    <li className="nav-item"><Link to="/home" className="nav-link">Home</Link></li>
+                    <li className="nav-item"><Link to="/order" className="nav-link">Order</Link></li>
+                    <li className="nav-item"><Link to="/admin" className="nav-link">Admin</Link></li>
                     <li className="nav-item"><Link to="/login" className="nav-link btn btn-primary">Login</Link></li>
                     {/* <li><button onClick={() => setLoggedInUser({})}>Log Out</button></li> */}
                 </ul>
