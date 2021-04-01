@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useContext } from 'react';
 import { UserContext } from '../../App';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import { useHistory, useLocation } from 'react-router-dom';
 import { initializeLoginFramework, handleGoogleSignIn, handleSignOut, handleFbSignIn, createUserWithEmailAndPassword, signInWithEmailAndPassword } from './loginManager';
 
@@ -92,7 +94,7 @@ function Login() {
     <div className="container d-flex justify-content-center">
       {
         loggedInUser.isSignedIn ? <button className="btn btn-danger" onClick={signOut}>Log Out</button> :
-          <button className="btn btn-primary" onClick={googleSignIn}>Continue With Google</button>
+          <button className="btn btn-primary" onClick={googleSignIn}><FontAwesomeIcon className="google-icon" icon={faGoogle} /> Continue With Google</button>
       }
     </div>
     // <div style={{textAlign: 'center'}}>
