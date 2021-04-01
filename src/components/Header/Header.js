@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from '../../images/logo.png';
 import './Header.css';
 import { Link } from 'react-router-dom';
 import { useContext } from 'react';
 import { UserContext } from '../../App';
+
+
 
 const Header = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
@@ -18,7 +20,12 @@ const Header = () => {
                     <li className="nav-item"><Link to="/home" className="nav-link">Home</Link></li>
                     <li className="nav-item"><Link to="/order" className="nav-link">Order</Link></li>
                     <li className="nav-item"><Link to="/admin" className="nav-link">Admin</Link></li>
-                    <li className="nav-item"><Link to="/login" className="nav-link btn btn-primary">Login</Link></li>
+                    <li className="nav-item"><Link to="/login" className="nav-link">{
+                        
+                        loggedInUser.isSignedIn ? <img style={{ height: '20px', width: '20px' }} src={loggedInUser.photo} alt="" /> :
+                            <span className="btn btn-primary">Log In</span>
+                        
+                    }</Link></li>
                     {/* <li><button onClick={() => setLoggedInUser({})}>Log Out</button></li> */}
                 </ul>
             </div>

@@ -90,7 +90,10 @@ function Login() {
 
   return (
     <div className="container d-flex justify-content-center">
-      <button className="btn btn-primary" onClick={googleSignIn}>Continue With Google</button>
+      {
+        loggedInUser.isSignedIn ? <button className="btn btn-danger" onClick={signOut}>Log Out</button> :
+          <button className="btn btn-primary" onClick={googleSignIn}>Continue With Google</button>
+      }
     </div>
     // <div style={{textAlign: 'center'}}>
     //   { user.isSignedIn ? <button onClick={signOut}>Sign Out</button> :

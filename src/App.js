@@ -26,7 +26,7 @@ function App(props) {
     <UserContext.Provider value = {[loggedInUser, setLoggedInUser]}>
       <div className="container">
         {/* <h1 className="text-center">ema-john-with-auth</h1> */}
-        <h3 className="text-center">Name: {loggedInUser.name}</h3>
+        {/* <h3 className="text-center">Name: {loggedInUser.name}</h3> */}
       </div>
       <Router>
         <Header></Header>
