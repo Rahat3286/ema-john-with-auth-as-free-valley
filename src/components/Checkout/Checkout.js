@@ -1,15 +1,15 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import './Shipment.css';
+import './Checkout.css';
 import { useContext } from 'react';
 import { UserContext } from '../../App';
 
-const Shipment = () => {
+const Checkout = () => {
   const { register, handleSubmit, watch, errors } = useForm();
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   const onSubmit = data => {
-      console.log('form submitted', data)
-    };
+    console.log('form submitted', data)
+  };
 
   console.log(watch("example")); // watch input value by passing the name of it
 
@@ -28,10 +28,10 @@ const Shipment = () => {
         <input name="phone" ref={register({ required: true })} placeholder="Your Phone Number" />
         {errors.phone && <span className="error">Phone Number is required</span>}
 
-        <input type="submit" />
+        <input className="btn btn-primary" type="submit" />
       </form>
     </div>
   );
 };
 
-export default Shipment;
+export default Checkout;

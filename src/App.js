@@ -12,7 +12,7 @@ import Home from './components/Home/Home';
 import NotFound from './components/NotFound/NotFound';
 import Order from './components/Order/Order';
 import ProductDetail from './components/ProductDetail/ProductDetail';
-import Shipment from './components/Shipment/Shipment';
+import Checkout from './components/Checkout/Checkout';
 import Login from './components/Login/Login';
 import { createContext } from 'react';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
@@ -25,7 +25,7 @@ function App(props) {
   return (
     <UserContext.Provider value = {[loggedInUser, setLoggedInUser]}>
       <div className="container">
-        <h1 className="text-center">ema-john-with-auth</h1>
+        {/* <h1 className="text-center">ema-john-with-auth</h1> */}
         <h3 className="text-center">Name: {loggedInUser.name}</h3>
       </div>
       <Router>
@@ -37,15 +37,21 @@ function App(props) {
           <Route path="/order">
             <Order/>
           </Route>
+          <Route path="/admin">
+            <Admin/>
+          </Route>
           <PrivateRoute path="/admin">
             <Admin/>
           </PrivateRoute>
           <Route path="/login">
             <Login></Login>
           </Route>
-          <PrivateRoute path="/shipment">
-            <Shipment></Shipment>
-          </PrivateRoute>
+          <Route path="/checkout">
+            <Checkout />
+          </Route>
+          {/* <PrivateRoute path="/checkout">
+            <Checkout/>
+          </PrivateRoute> */}
           <Route exact path="/">
             <Home/>
           </Route>

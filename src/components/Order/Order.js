@@ -14,7 +14,7 @@ const Order = () => {
     const history = useHistory();
 
     const handleProceedCheckout = () => {
-        history.push('/shipment');
+        history.push('/checkout');
     }
 
     const removeProduct = (productKey) => {
@@ -42,7 +42,7 @@ const Order = () => {
     }
     return (
         <div className="container">
-            <h1 style={{ color: 'rgb(54,57,88)' }}>Checkout</h1>
+            <h1 style={{ color: 'rgb(54,57,88)' }} className="mb-5">Checkout</h1>
             <div className="col-md-12 d-flex justify-content-around border-bottom">
                 <div className="col-md-3"><h4>Description</h4></div>
                 <div className="col-md-3"><h4>Quantity</h4></div>
