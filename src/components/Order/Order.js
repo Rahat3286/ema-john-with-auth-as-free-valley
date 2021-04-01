@@ -42,22 +42,22 @@ const Order = () => {
     }
     return (
         <div className="container">
-            <h1 style={{ color: 'rgb(54,57,88)' }} className="mb-5">Checkout</h1>
-            <div className="col-md-12 d-flex justify-content-around border-bottom">
-                <div className="col-md-3"><h4>Description</h4></div>
-                <div className="col-md-3"><h4>Quantity</h4></div>
-                <div className="col-md-3"><h4>Price</h4></div>
+            <h1 style={{ color: 'rgb(54,57,88)' }} className="col-md-12 mb-5">Checkout</h1>
+                <div className="col-md-12 d-flex justify-content-between border-bottom">
+                <div className="col-md-3"><p><b>Description</b></p></div>
+                <div className="col-md-3"><p><b>Quantity</b></p></div>
+                <div className="col-md-3"><p><b>Price</b></p></div>
                 <div className="col-md-3"><FontAwesomeIcon icon={faTrash} /></div>
-            </div>
+                </div>
             {
                 cart.map(pd => <OrderedItem
                     key={pd.key}
                     removeProduct={removeProduct}
                     product={pd}></OrderedItem>)
             }
-            <div className="text-center">
+            <div className="text-right col-md-12">
                 <Cart cart={cart}>
-                    <button onClick={handleProceedCheckout} className="btn btn-success mt-5 ">Checkout</button>
+                    <button onClick={handleProceedCheckout} className="btn btn-success mt-5  ">Checkout</button>
                 </Cart>
             </div>
         </div>
@@ -65,3 +65,10 @@ const Order = () => {
 };
 
 export default Order;
+
+{/* <div className="col-md-12 d-flex justify-content-between border-bottom">
+    <div className="col-md-3"><h4>Description</h4></div>
+    <div className="col-md-3"><h4>Quantity</h4></div>
+    <div className="col-md-3"><h4>Price</h4></div>
+    <div className="col-md-3"><FontAwesomeIcon icon={faTrash} /></div>
+</div> */}

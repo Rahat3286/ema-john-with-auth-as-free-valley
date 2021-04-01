@@ -34,27 +34,27 @@ function App(props) {
           <Route path="/home">
             <Home/>
           </Route>
-          <PrivateRoute path="/order">
+          {/* <PrivateRoute path="/order">
             <Order/>
-          </PrivateRoute>
-          {/* <Route path="/order">
+          </PrivateRoute> */}
+          <Route path="/order">
             <Order/>
-          </Route> */}
-          <PrivateRoute path="/admin">
+          </Route>
+          {/* <PrivateRoute path="/admin">
             <Admin/>
-          </PrivateRoute>
-          {/* <Route path="/admin">
+          </PrivateRoute> */}
+          <Route path="/admin">
             <Admin/>
-          </Route> */}
+          </Route>
           <Route path="/login">
             <Login></Login>
           </Route>
-          <PrivateRoute path="/checkout">
+          {/* <PrivateRoute path="/checkout">
             <Checkout/>
-          </PrivateRoute>
-          {/* <Route path="/checkout">
+          </PrivateRoute> */}
+          <Route path="/checkout">
             <Checkout />
-          </Route> */}
+          </Route>
           <Route exact path="/">
             <Home/>
           </Route>

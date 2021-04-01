@@ -12,10 +12,10 @@ const OrderedItem = (props) => {
     //     marginLeft: '200px'
     // };
     return (
-        <div className="container col-md-12 d-flex justify-content-around border-bottom ">
-            <h6 className="col-md-3">{description}</h6>
-            <h6 className="col-md-3">{quantity}</h6>
-            <h6 className="col-md-3"> $ {price}</h6>
+        <div className="container col-md-12 d-flex justify-content-between border-bottom ">
+            <p className="col-md-3">{description}</p>
+            <p className="col-md-3">{quantity}</p>
+            <p className="col-md-3"> $ {price}</p>
             <button
                 className="btn btn-danger col-md-3"
                 onClick={() => props.removeProduct(key)}
