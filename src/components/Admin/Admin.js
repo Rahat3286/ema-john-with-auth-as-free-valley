@@ -1,11 +1,11 @@
-import axios from 'axios';
 import React, { useState } from 'react';
+import axios from 'axios';
 import { useForm } from 'react-hook-form';
 
 const Admin = () => {
 
     const handleAddProduct = () => {
-        const product ={};
+        const product = {};
         fetch('http://localhost:5000/addProduct', {
             method: 'POST',
             headers: {
@@ -17,29 +17,13 @@ const Admin = () => {
 
     return (
         <div className="container">
-            <div className="row mb-5 justify-content-center">
-                <div className="col-md-5">
-                    <label for="" className="col-form-label"><b>Product Name</b></label>
-                    <input className="form-control" type="text" placeholder="Enter Name" aria-label="default input example" />
-                </div>
-                <div className="col-md-5">
-                    <label for="" className="col-form-label"><b>Weight</b></label>
-                    <input className="form-control" type="text" placeholder="Enter weight with Unit" aria-label="default input example" />
-                </div>
-            </div>
-            <div className="row justify-content-center">
-                <div className="col-md-5">
-                    <label for="" className="col-form-label"><b>Add Price</b></label>
-                    <input className="form-control " type="text" placeholder="Enter Price" aria-label="default input example" />
-                </div>
-                <div className="col-md-5">
-                    <label for="" className="col-form-label"><b>Product Name</b></label>
-                    <input className="form-control" type="file"  placeholder="Enter weight with Unit" aria-label="default input example" />
-                </div>
-            </div>
-            <div className="container text-right">
+            <form method="post" >
+                <input type="text" placeholder="description" name="description"/>
+                <input type="text" placeholder="title" name="title"/>
+                <input type="text" placeholder="weight" name="weight"/>
+                <input type="text" placeholder="price" name="price"/>
                 <button className="btn btn-success" onClick={handleAddProduct}>Save</button>
-            </div>
+            </form>
         </div>
     );
 };
@@ -47,6 +31,60 @@ const Admin = () => {
 export default Admin;
 
 // first code
+
+
+{/* <div className="row mb-5 justify-content-center">
+                <div className="col-md-5">
+                    <form action="/addProduct" method="post">
+                        <label for="" className="col-form-label"><b>Product Name</b></label>
+                        <input className="form-control" type="text" placeholder="Enter Name" name="description" aria-label="default input example" />
+                    </form>
+                </div>
+                <div className="col-md-5">
+                    <form action="/addProduct" method="post">
+                        <label for="" className="col-form-label"><b>Weight</b></label>
+                        <input className="form-control" type="text" placeholder="Enter weight with Unit" name="weight" aria-label="default input example" />
+                    </form>
+                </div>
+            </div>
+            <div className="row justify-content-center">
+                <div className="col-md-5">
+                    <form action="/addProduct" method="post">
+                        <label for="" className="col-form-label"><b>Add Price($)</b></label>
+                        <input className="form-control " type="text" placeholder="Enter Price"
+                            name="price" aria-label="default input example" />
+                    </form>
+                </div>
+                <div className="col-md-5">
+                    <form action="/addProduct" method="post">
+                        <label for="" className="col-form-label"><b>Upload Image</b></label>
+                        <input className="form-control" type="file" placeholder="Upload Image"
+                            name="imgUrl" aria-label="default input example" />
+                    </form>
+                </div>
+            </div>
+            <div className="container text-right">
+                <button className="btn btn-success" onClick={handleAddProduct}>Save</button>
+            </div> */}
+
+
+
+
+
+
+
+
+
+
+{/* <form className="container" action="/addProduct" method="post">
+    <input type="text" placeholder="name" name="title" />
+    <input type="text" placeholder="weight in unit(kg)" name="weight" />
+    <input type="text" placeholder="price" name="price" />
+    <input type="text" placeholder="product key" name="key" />
+    <button className="btn btn-primary" type="submit" onClick={handleAddProduct}>Save</button>
+</form> */}
+
+
 
 
 
