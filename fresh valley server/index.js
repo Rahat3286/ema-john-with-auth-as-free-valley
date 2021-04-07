@@ -13,7 +13,7 @@ const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster
 const app = express()
 
 app.get('/', (req, res) => {
-    res.send('Hello from free valley its working')
+    res.send('hello from freshvalley its working')
 })
 
 app.use(bodyParser.json());
@@ -33,11 +33,11 @@ client.connect(err => {
     app.post("/addProduct", (req, res) => {
         const product = req.body;
         console.log(product)
-        // productsCollection.insertOne(product)
-        //     .then(result => {
-        //         // console.log(result.insertedCount);
-        //         res.send(result.insertedCount)
-        //     })
+        productsCollection.insertOne(product)
+            .then(result => {
+                console.log(result.insertedCount);
+                res.send(result.insertedCount > 0)
+            })
     })
 
     app.get('/products', (req, res) => {
